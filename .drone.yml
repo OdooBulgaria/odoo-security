@@ -1,0 +1,14 @@
+image: odoo-8.0-test
+git:
+    path: /
+script:
+    - git clone https://github.com/OCA/l10n-spain.git ${HOME_ADDONS}/l10n-spain -b ${VERSION}
+    - git clone https://github.com/OCA/partner-contact ${HOME_ADDONS}/partner-contact -b ${VERSION}
+    - bzr branch lp:acysos/openerp-addons-8.0 ${HOME_ADDONS}/acysos-addons
+    - mv /var/cache/drone/src ${HOME_ADDONS_TEST} 
+    - chown odoo:odoo /home/odoo -R 
+    - sudo -u odoo HOME="/home/odoo" VERSION=8.0 FORCE_TEST=1 HOME_ADDONS_TEST="/home/odoo/addons/src" OPTIONS="--stop-after-init --test-commit" /home/odoo/bin/tests
+notify:
+    email:
+        recipients:
+            - info@trey.es
