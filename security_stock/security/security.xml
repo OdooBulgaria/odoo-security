@@ -11,9 +11,9 @@
 
     <!-- Reglas -->
 
-    <!-- [security_stock_extends] Albaran: mostrar solo albaranes relacionados con sus clientes asignados-->
+    <!-- [security_stock] Albaran: mostrar solo albaranes relacionados con sus clientes asignados-->
     <record id="stock_picking_see_our_partners_rule" model="ir.rule">
-        <field name="name">[security_stock_extends] Mostrar albaranes relacionados con sus clientes asignados</field>
+        <field name="name">[security_stock] Mostrar albaranes relacionados con sus clientes asignados</field>
         <field name="model_id" ref="stock.model_stock_picking"/>
         <field name="domain_force">[('partner_id.user_id','=',user.id)]</field>
         <field name="groups" eval="[(4, ref('group_own_stock_picking'))]"/>
