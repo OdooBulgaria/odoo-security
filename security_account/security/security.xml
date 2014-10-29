@@ -20,9 +20,9 @@
 
     <!-- Reglas -->
 
-    <!-- [security_account_extends] Factura: mostrar facturas pendientes de cobro de sus empresas asignados-->
+    <!-- [security_account] Factura: mostrar facturas pendientes de cobro de sus empresas asignados-->
     <record id="account_invoice_see_our_open_rule" model="ir.rule">
-        <field name="name">[security_account_extends] Mostrar facturas pendientes de cobro de sus empresas asignadas (comercial)</field>
+        <field name="name">[security_account] Mostrar facturas pendientes de cobro de sus empresas asignadas (comercial)</field>
         <field name="model_id" ref="account.model_account_invoice"/>
         <field name="domain_force">[('state','=','open'),('partner_id.user_id','=',user.id)]</field>
         <field name="groups" eval="[(4, ref('group_account_invoice_open'))]"/>

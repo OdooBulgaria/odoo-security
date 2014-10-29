@@ -2,23 +2,23 @@ Información
 ===========
 
 Este modulo pertenece a una serie de modulos que añaden grupos y reglas de seguridad
-para que puedan ser asignadas a los usuarios. La serie ```security_*_extend``` incluye
+para que puedan ser asignadas a los usuarios. La serie ```security_*``` incluye
 los siguientes modulos:
 
-**security_extend**
+**security**
 
 Afecta a los datos maestros como productos y empresas, y a otros elementos
 del backoffice.
 
-**security_sale_extend**
+**security_sale**
 
 Crea reglas para el area de Ventas
 
-**security_stock_extend**
+**security_stock**
 
 Crea reglas para el area de Almacén y Logistica.
 
-**security_account_extend**
+**security_account**
 
 Crea reglas para el area de Contabilidad
 
