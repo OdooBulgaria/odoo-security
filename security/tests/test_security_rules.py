@@ -45,7 +45,7 @@ class test_security_rules(common.TransactionCase):
         self.groups = {}
         for group_id in groups_ids:
             ids = self.registry('ir.model.data').get_object_reference(
-                cr, uid, 'security_extend', group_id)
+                cr, uid, 'security', group_id)
             self.groups[group_id] = ids and ids[1] or False
 
         Partner = self.registry('res.partner')

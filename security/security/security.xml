@@ -18,7 +18,7 @@
     </record>
     <!-- Regla -->
     <record id="group_partner_customer_created_rule" model="ir.rule">
-        <field name="name">[security_extend] Solo a los creados</field>
+        <field name="name">[security] Solo a los creados</field>
         <field name="model_id" ref="base.model_res_partner"/>
         <field name="domain_force">['|', ('id', '=', user.partner_id.id), ('create_uid', '=', user.id)]</field>
         <field name="groups" eval="[(4, ref('group_partner_customer_created'))]"/>
@@ -33,7 +33,7 @@
     </record>
     <!-- Regla -->
     <record id="group_partner_customer_salesman_rule" model="ir.rule">
-        <field name="name">[security_extend] Empresas asignadas (comercial)</field>
+        <field name="name">[security] Empresas asignadas (comercial)</field>
         <field name="model_id" ref="base.model_res_partner"/>
         <field name="domain_force">['|', ('id', '=', user.partner_id.id), ('user_id', '=', user.id)]</field>
         <field name="groups" eval="[(4, ref('group_partner_customer_salesman'))]"/>

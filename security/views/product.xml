@@ -2,7 +2,7 @@
 <openerp>
     <data>
 
-        <record id="product_template_form_security_extend_view" model="ir.ui.view">
+        <record id="product_template_form_security_view" model="ir.ui.view">
             <field name="name">product.template.product.form</field>
             <field name="model">product.template</field>
             <field name="inherit_id" ref="product.product_template_form_view"/>
@@ -10,7 +10,7 @@
             <field name="arch" type="xml">
                 <data>
                     <xpath expr="//page[@string='Procurements']" position="attributes">
-                        <attribute name="groups">security_extend.group_product_procurement</attribute>
+                        <attribute name="groups">security.group_product_procurement</attribute>
                     </xpath>
                 </data>
             </field>
