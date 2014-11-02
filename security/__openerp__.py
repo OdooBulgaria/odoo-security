@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-##############################################################################
+###############################################################################
 #
 #    Trey, Kilobytes de Soluciones
 #    Copyright (C) 2014-Today Trey, Kilobytes de Soluciones <www.trey.es>
@@ -17,7 +17,7 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-##############################################################################
+###############################################################################
 
 {
     'name': 'Extension de las reglas de permisos',
@@ -26,7 +26,7 @@
     'version': '0.1',
     'description': """
     """,
-    'author': 'Trey',
+    'author': 'Trey Kilobytes de Soluciones (www.trey.es)',
     'depends': [
         'base',
         'product'

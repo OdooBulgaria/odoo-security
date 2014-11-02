@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-##############################################################################
+###############################################################################
 #
 #    Trey, Kilobytes de Soluciones
 #    Copyright (C) 2014-Today Trey, Kilobytes de Soluciones <www.trey.es>
@@ -17,11 +17,8 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-##############################################################################
-
+###############################################################################
 from openerp.tests import common
-from openerp.exceptions import AccessError
-from openerp.osv.orm import except_orm
 
 
 class test_security_rules(common.TransactionCase):
@@ -49,23 +46,8 @@ class test_security_rules(common.TransactionCase):
             self.groups[group_id] = ids and ids[1] or False
 
         Partner = self.registry('res.partner')
-        partner_id = Partner.create(cr, self.utid, {
+        Partner.create(cr, self.utid, {
             'name': 'Usuario creado para las pruebas',
             'email': 'test@localhost',
             'is_company': True,
         }, context=None)
-
-
-    def test_partner(self):
-        cr, uid, utid = self.cr, self.uid, self.utid
-
-        # partner_id = Partner.create(cr, uid, {
-        #     'name': 'Usuario creado para las pruebas'
-        # })
-
-        # with self.assertRaises(AccessError):
-        #     partner_id = Partner.create(cr, utid, {
-        #         'name': 'Usuario creado para las pruebas'
-        #     })
-
-
