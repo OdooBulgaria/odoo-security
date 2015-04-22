@@ -31,7 +31,7 @@
         'base',
     ],
     'data': [
-        'views/res_company_view.xml'
+        'views/company_view.xml',
     ],
     'installable': True,
 }

@@ -10,8 +10,12 @@ class IrUiMenu(models.Model):
     _inherit = 'ir.ui.menu'
 
     @api.multi
-    def load_menus_root(self):
-        menus = super(IrUiMenu, self).load_menus_root()
-        for root_menu in menus['all_menu_ids']:
-            print root_menu
-
+    @api.returns('self')
+    def _filter_visible_menus(self):
+        res = super(IrUiMenu, self)._filter_visible_menus()
+        if self.env.user.company_id.hidden_menu_ids:
+            return res.filtered(lambda menu:
+                                menu not in
+                                self.env.user.company_id.hidden_menu_ids
+                                )
+        return res
