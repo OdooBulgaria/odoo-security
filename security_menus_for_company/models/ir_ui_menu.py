@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 # License, author and contributors information in:
 # __openerp__.py file at the root folder of this module.
-
-
-from openerp import models, api, exceptions, _
+from openerp import models, api
 
 
 class IrUiMenu(models.Model):

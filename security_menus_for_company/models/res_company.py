@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 # License, author and contributors information in:
 # __openerp__.py file at the root folder of this module.
-
-
-from openerp import models, api, exceptions, fields, _
+from openerp import models, api, fields
 
 
 class ResCompany(models.Model):
@@ -16,3 +14,11 @@ class ResCompany(models.Model):
         column2="menu_id",
         string="Hidden Menus"
     )
+
+    @api.one
+    def write(self, vals):
+        '''Limpia la cache en el caso de ocultar un menu.'''
+
+        if 'hidden_menu_ids' in vals:
+            self.env['ir.ui.menu'].clear_caches()
+        return super(ResCompany, self).write(vals)

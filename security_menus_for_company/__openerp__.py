@@ -2,7 +2,7 @@
 ###############################################################################
 #
 #    Trey, Kilobytes de Soluciones
-#    Copyright (C) 2014-Today Trey, Kilobytes de Soluciones <www.trey.es>
+#    Copyright (C) 2015-Today Trey, Kilobytes de Soluciones <www.trey.es>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,11 +18,10 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ###############################################################################
-
 {
     'name': 'Ocultar Menus X Empresas',
     'category': 'security',
-    'summary': 'Ocultar menus del interface de usuario por empresa',
+    'summary': 'Ocultar menus del interface de usuario por compania.',
     'version': '0.1',
     'description': """
     """,
