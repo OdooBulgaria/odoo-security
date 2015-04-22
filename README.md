@@ -16,3 +16,7 @@ Crea reglas para el area de Ventas
 ```security_stock ```
 ====
 Crea reglas para el area de Almacén y Logistica.
+
+```security_menus_for_company ```
+====
+Oculta menús del interface de usuario por compañía.
